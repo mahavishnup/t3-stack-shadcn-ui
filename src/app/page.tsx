@@ -1,6 +1,7 @@
 import { unstable_noStore as noStore } from "next/cache";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 
 import { CreatePost } from "@/app/_components/create-post";
 import { getServerAuthSession } from "@/server/auth";
@@ -59,8 +60,9 @@ export default async function Home() {
           </div>
         </div>
 
-        <div>
+        <div className="flex gap-4">
           <Button>Click me</Button>
+          <ThemeSwitcher />
         </div>
 
         <CrudShowcase />
