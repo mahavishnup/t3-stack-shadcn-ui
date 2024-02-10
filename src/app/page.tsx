@@ -1,5 +1,6 @@
 import { unstable_noStore as noStore } from "next/cache";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 import { CreatePost } from "@/app/_components/create-post";
 import { getServerAuthSession } from "@/server/auth";
@@ -56,6 +57,10 @@ export default async function Home() {
               {session ? "Sign out" : "Sign in"}
             </Link>
           </div>
+        </div>
+
+        <div>
+          <Button>Click me</Button>
         </div>
 
         <CrudShowcase />
